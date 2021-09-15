@@ -1,0 +1,348 @@
+#Main {
+    display: flex;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 12px;
+    background-color: var(--PrimaryColor);
+    margin: 0 auto;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 0px;
+}
+
+#Camps {
+    border-bottom: solid white 0.5px;
+    flex-grow: 0.25;
+    display: flex;
+}
+
+.TeamPreview {
+    flex: 1 1 0px;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.TeamContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0.8;
+}
+
+.TeamPreview:nth-child(1) {
+    border-right: solid white 0.5px;
+}
+
+.TeamPreview:nth-child(2) {
+    border-left: solid white 0.5px;
+}
+
+.Deroulement {
+    flex: 1 0 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-left: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Scroller {
+    overflow-y: scroll !important;
+    height: 70%;
+    flex: 0 1 100%;
+    margin-bottom: 0.2%;
+}
+
+.Image {
+    width: 10vw;
+    height: 10vh;
+    top: 0;
+}
+
+.Image img {
+    top: 0;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.button {
+    background-color: var(--PrimaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1vh 1vw;
+    transition: 0.2s;
+}
+
+.button>* {
+    margin: 0;
+}
+
+#btnDOM {
+    position: absolute;
+    top: 50%;
+    left: 11.5%;
+}
+
+#btnEXT {
+    position: absolute;
+    top: 50%;
+    left: 86%;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+#Categories, #Categories div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex: 0 1 100%;
+    align-items: center;
+}
+
+#Categories #CategoriesDOM h3 {
+    border-right: solid;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+
+#Categories #CategoriesEXT h3 {
+    border-left: solid;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    text-align: center;
+}
+
+#Categories #CategoriesEXT h3:nth-child(1), #Categories #CategoriesDOM h3:nth-child(3) {
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 0;
+}
+
+#Categories {
+    padding-right: 14px;
+    flex: 0 3.5 100%;
+    margin-bottom: -2.5%;
+    margin-top: -2%;
+}
+
+.ActionExterieur {
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 50%;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.ActionExterieur h4, .ActionDomicile h4 {
+    flex-grow: 3.9;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 2px auto;
+}
+
+.ActionExterieur h4:nth-child(1), .ActionDomicile h4:nth-child(3) {
+    flex-grow: 4;
+    flex-shrink: 4;
+    flex-basis: 0;
+}
+
+.ActionDomicile {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding-right: 50%;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.ActionDomicile:hover, .ActionExterieur:hover {
+    background-color: rgba(231, 231, 231, 0.582);
+}
+
+.Temps {
+    flex: 0.7 0.7 0 !important;
+}
+
+.Action {
+    flex: 1.7 1.7 0 !important;
+}
+
+.Deroulement {
+    font-size: 1.3vw;
+}
+
+#Darken {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Popup {
+    width: 50vw;
+    height: 60vh;
+    background-color: var(--PrimaryColor);
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Popup div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+#PopupEXT, #PopupDOM, #Darken, #PopupMOD {
+    display: none;
+    opacity: 0;
+}
+
+.ContentPopup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    flex-grow: 0.6 !important;
+}
+
+.InputNumber {
+    width: 3vw;
+}
+
+.FooterPopup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.BtnPopup {
+    background-color: var(--PrimaryColor);
+    padding: 12px;
+    border-radius: 6px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.Cancel, .Delete, #CancelBTN {
+    background-color: rgba(138, 26, 26, 0.4);
+}
+
+.Add, .Modify {
+    background-color: rgba(17, 206, 0, 0.4);
+}
+
+.BtnPopup:hover {
+    transform: scale(1.1);
+}
+
+.BtnPopup:active {
+    transform: scale(0.9);
+}
+
+.DivPlayer {
+    display: flex;
+    flex-direction: column;
+}
+
+.DivPlayer>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DivPlayer>div:nth-of-type(2) {
+    display: none;
+}
+
+#Footer {
+    display: flex;
+    margin: 10px auto;
+    width: 60%;
+    justify-content: space-evenly;
+}
+
+.Stat {
+    display: none;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.StatContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.StatContent:nth-of-type(1) {
+    border-right: solid white 0.5px;
+}
+
+.StatContent:nth-of-type(2) {
+    border-left: solid white 0.5px;
+}
+
+.StatContent>div {
+    flex: 1 0 0;
+}
+
+.Selected {
+    background-color: rgba(73, 73, 73, 0.829) !important;
+}
+
+#Save {
+    background-color: rgba(17, 206, 0, 0.4);
+}
+
+.End {
+    border: solid red 0.5px;
+    padding-right: 49% !important;
+    background-color: #5d5d5d;
+}
+
+.ListActionDIV {
+    display: flex;
+    flex-direction: column;
+}
+
+.ListActionDIV>select:last-child {
+    display: none;
+}

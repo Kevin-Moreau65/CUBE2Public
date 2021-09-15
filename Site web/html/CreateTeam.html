@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/Site web/css/CreateTeam.css" > 
+  <link rel="stylesheet" href="/Site web/css/default.css" > 
+  <meta charset="UTF-8" >
+
+</head>
+
+<body>
+
+  <div class="entete">
+    <h1 id="Titre">Création d'une équipe  </h1> 
+
+    <a id="étapes"
+      ><span id="Etapetext">Etape 1/3</span>
+      <progress id="Barreetape" value="0.33"></progress>
+    </a>
+  </div>
+
+ 
+     
+<div id="Etape1">     
+ <!-- début contenu ----------------------------------------------- -->
+  
+   
+      
+           
+    <div id="greybox">
+      
+      <h2>Renseigner les informations suivantes:</h2>
+
+      <input type="text" placeholder="Nom de l'équipe" id="nom_equipe" size="30">    
+      
+      <form enctype="multipart/form-data" method="post">
+        
+      <div id="flexbox">
+        
+        <div class ="input-page1">
+        <div class="input-file-container">
+          <input class="input-file" id="my-file" type="file" style="display:none ;">
+          <label for="my-file" class="input-file-trigger" tabindex="0">
+            Emblème
+          </label>
+        </div>
+             
+        <div class="input-file-container">
+          <input class="input-file" id="my-file" type="file" style="display:none ;">
+          <label for="my-file" class="input-file-trigger" tabindex="0">
+          Maillot Domicile
+          </label>
+        </div>
+
+        <div class="input-file-container">
+          <input class="input-file" id="my-file" type="file" style="display:none ;">
+          <label for="my-file" class="input-file-trigger" tabindex="0">
+          Maillot Exterieur
+          </label>
+        </div>
+
+        <div class="input-file-container">
+          <input class="input-file" id="my-file" type="file" style="display:none ;">
+          <label for="my-file" class="input-file-trigger" tabindex="0">
+          Maillot Alternatif
+          </label>
+        </div>
+        <div id="print_MA"></div> 
+      </div>
+  
+  </form>
+
+      </div>
+    </div>
+    
+    <p class="file-return"></p>
+
+</div>
+
+<!--Etape 2  ---------------------------------------------------------------->
+<div id="Etape2" class="PasPassé">  
+
+ 
+      <div id="Alignement">
+      <div id="Conteneur">
+        <div class="element 1"><h3><input class="case_form" type="text" placeholder="Nom" size="24"id="nom"></h3></div>
+        <div class="element 2"><h3><input class="case_form" type="text" placeholder="Prénom" size="24"id="prenom"></h3></div>
+        <div class="element 4"><h3><input class="case_form" type="number" placeholder="Numéro" size="24" id="numero"></h3></div>
+        <div class="element 5">
+            <select class="case_form"name="poste" id="poste-select">
+                <option selected>--Choisisser un poste--</option>
+                <option value="Attaquant">Attaquant</option>
+                <option value="Defenseur">Defenseur</option>
+                <option value="Milieu">Milieu</option>
+                <option value="Gardien">Gardien</option>
+            </select>
+        </div>
+        <button id="ajouter_joueur"><h3>Ajouter</h3></button>
+        
+      </div>
+
+      
+
+  <div id=carrégris>
+    <table class="onglet">
+        
+        
+    </table>
+    
+      <table id="Tableau">
+          
+        <thead>
+          <tr>
+              <th>Nom</th>
+              <th>Prenom</th>
+              <th>Numero</th>
+              <th>Poste</th>
+          </tr>
+        </thead>
+
+        </tr>
+         
+          </tr>  
+      </table>
+      
+    </div>
+    
+  </div>
+  <button id="recap"><h3>Vers le recap</h3></button>
+
+</div>
+</div>
+
+</div>
+<!-- etape 3 ------------------------------------------------------------------------------ -->
+<div id="Etape3" class="PasPassé">
+
+
+  <div class="ligne_logo">
+   
+
+    <div id="print_NE"></div>
+    <div id="logo_E">
+        <img id="imgembleme" height="90" width="90">
+    </div>
+    
+  </div>
+
+<div id="recap_match">
+
+    <div class="element_1">
+        <div class="case_Attaquant">Attaquants</div> 
+        <div class="liste_joueurs" id="liste_attaquants"></div>
+
+        <div class="case_Milieux">Milieux</div> 
+        <div class="liste_joueurs" id ="liste_milieux"></div>
+
+        <div class="case_Defenseurs">Defenseurs</div>
+        <div class="liste_joueurs" id="liste_defenseurs"></div>
+
+        <div class="case_Gardiens">Gardiens</div>
+        <div class="liste_joueurs" id="liste_gardiens"></div>
+
+      <table>
+        <tr>
+          <th>Nom</th>      
+          <th>Prenom</th>      
+          <th>Numero</th>      
+          <th>Poste</th>
+      </table>
+
+    <div class="element_2">
+        <div class="Maillot_1">Maillot_1</div>
+        <div class="cadreimages">
+            <img id="imgMD">
+          </div>
+        <div class="Maillot_2">Maillot_2</div>
+        <div class="cadreimages">
+            <img id="imgME">
+        </div>
+        <div class="Maillot_3">Maillot_3</div>
+        <div class="cadreimages">
+            <img id="imgMA">
+          </div>
+    </div> 
+    <button id="Sendtodb"> Envoyer</button>
+</div>
+
+</div>
+<!-- fin de contenu  --------------------------------------------------->
+
+<div id="Precedent">
+  <h3><</h3>
+  <h4 id="BackStep">Menu Principal</h4>
+</div>
+<div id="Suivant">
+  <h3>></h3>
+  <h4 id="NextStep">Saisie des joueurs</h4>
+</div>
+<div id="Darken"></div>
+<div id="Centre">
+    <div id="AlerteRetour">
+      <h2>Retour</h2>
+      <h3>Voulez-vous retourner au menu principal ?</h3>
+         <h4>(Votre avancée ne sera pas sauvegardée)</h4>
+       <h3 id="RetourMenu">Oui</h3>
+        <h3 id="RetourPage">Non</h3>
+</div>  
+</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/Site web/js/PageFinale.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+- Lors de la première étape :
+    Coté JS :
+        Ecouter le bouton mit en place,
+        Récup les champs des équipe + arbitres + lieu + date,
+        Les mettre dans un JSON sous la forme de :
+        {
+            EquipeDOM: 'Ton Equipe',
+            EquipeEXT: 'Ton Equipe',
+            Date: 'La date',
+            Arbitres: [
+                ArbitrePrincipale,
+                ArbitreSecondaire1,
+                ArbitreSecondaire2,
+            ],
+            Lieu: 'Lieu',
+            MatchenPrépa?: (= 0 si en prépa, = 1 si non)
+        }
+        Faire un $.post appelant sauvegarde.php et lui envoyer les donner, éventuellement recevoir un succès.
+    Coté PHP :
+        Recevoir le JSON,
+        Le "traduire" en tableau php,
+        Puis faire une requete SQL (sous la forme de : INSERT INTO 'Ta Table' (Les données dans l'ordre)) pour envoyer tout ca a la DB,
+        Envoyer une réponse au js (positive ou négative) 

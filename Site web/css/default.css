@@ -1,0 +1,162 @@
+/* Variables */
+
+:root {
+    --PrimaryColor: rgba(206, 206, 206, 0.4);
+    --AccentColor: #07587e;
+}
+
+/* body standard*/
+
+body {
+    background-image: url("../img/Background-Menu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    font-variant-numeric: lining-nums;
+    scrollbar-width: thin;
+    color: white;
+}
+
+#Titre {
+    color: white;
+    margin-top: 5%;
+    text-align: center;
+    cursor: default;
+}
+
+/* barre de proression*/
+
+#Barreetape::-moz-progress-bar {
+    background-color: rgb(54, 154, 202);
+}
+
+#Barreetape::-webkit-progress-bar {
+    background-color: rgb(255, 255, 255);
+}
+
+#Barreetape::-webkit-progress-value {
+    background-color: rgb(54, 154, 202);
+}
+
+#Barreetape {
+    border-radius: 9px;
+    overflow: hidden;
+    border: none;
+}
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: rgb(206, 206, 206);
+    ;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+/* flèche */
+
+/* Schéma : <div id="Precedent">
+    <h3>
+    < <h4 id="BackStep">*Etape précédente*</h4>
+</div>
+*/
+
+#Precedent, #Suivant {
+    background-color: var(--PrimaryColor);
+    backdrop-filter: blur(5px);
+    width: 1.2em;
+    text-align: center;
+    height: 15vh;
+    position: absolute;
+    top: 49%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    color: black;
+    transition: transform 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#Precedent:hover, #Suivant:hover {
+    transform: scale(1.05);
+}
+
+#Precedent:active, #Suivant:active {
+    transform: scale(0.95)
+}
+
+#Precedent {
+    margin-right: 85.5%;
+    right: 0;
+    padding-right: 10px;
+}
+
+#Suivant {
+    margin-left: 85%;
+    padding-left: 10px;
+}
+
+#Suivant>h3 {
+    margin-right: 10px;
+}
+
+#Precedent>h3 {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+
+#NextStep {
+    position: absolute;
+    left: 0;
+    margin-left: 1.8em;
+    height: auto;
+    width: 8em;
+}
+
+#BackStep {
+    position: absolute;
+    right: 0;
+    margin-right: 2em;
+    height: auto;
+    width: 8em;
+}
+
+/* classes spéciales */
+
+.blur {
+    backdrop-filter: blur(5px);
+}
+
+/* Animations */
+
+.Passé {
+    transform: translateX(-200%) scale(0.1);
+    opacity: 0;
+}
+
+.PasPasse {
+    transform: translateX(200%) scale(0.1);
+    opacity: 0;
+}

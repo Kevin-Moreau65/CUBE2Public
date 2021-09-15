@@ -1,0 +1,459 @@
+    .Etape {
+        position: relative;
+        background-color: var(--PrimaryColor);
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 0px 0px 10px black;
+        overflow: hidden;
+        transition: transform 1s, opacity 1s;
+    }
+
+    #Etape1 {
+        top: 6%;
+        width: 65%;
+        height: 33vw;
+    }
+
+    #Etape2 {
+        width: 70%;
+        margin-top: -30vw;
+    }
+
+    #Etape3 {
+        width: 70%;
+        margin-top: -70vh;
+    }
+
+    #Terrain {
+        z-index: -20;
+        width: 100%;
+        margin: auto;
+        display: block;
+        height: 70vh;
+    }
+
+    .MenuGauche {
+        position: absolute;
+        width: 25%;
+        left: 0%;
+        text-align: center;
+        height: 100%;
+    }
+
+    .MenuDroit {
+        position: absolute;
+        width: 25%;
+        right: 0%;
+        text-align: center;
+        height: 100%;
+    }
+
+    #Maillot1, #Maillot1E {
+        position: absolute;
+        left: 39.5%;
+        top: 13%;
+    }
+
+    #Maillot2, #Maillot2E {
+        position: absolute;
+        left: 53.5%;
+        top: 13%;
+    }
+
+    #Maillot3, #Maillot3E {
+        position: absolute;
+        left: 28%;
+        top: 33%;
+    }
+
+    #Maillot4, #Maillot4E {
+        position: absolute;
+        left: 38%;
+        top: 33%;
+    }
+
+    #Maillot5, #Maillot5E {
+        position: absolute;
+        left: 55%;
+        top: 33%;
+    }
+
+    #Maillot6, #Maillot6E {
+        position: absolute;
+        left: 65%;
+        top: 33%;
+    }
+
+    #Maillot7, #Maillot7E {
+        position: absolute;
+        left: 28%;
+        bottom: 27%;
+    }
+
+    #Maillot8, #Maillot8E {
+        position: absolute;
+        left: 38%;
+        bottom: 27%;
+    }
+
+    #Maillot9, #Maillot9E {
+        position: absolute;
+        left: 55%;
+        bottom: 27%;
+    }
+
+    #Maillot10, #Maillot10E {
+        position: absolute;
+        left: 65%;
+        bottom: 27%;
+    }
+
+    #Maillot11, #Maillot11E {
+        position: absolute;
+        left: 46.5%;
+        bottom: -0.5%;
+    }
+
+    #TerrainMaillot {
+        width: 50%;
+        margin: auto;
+        display: block;
+        height: 69.8vh;
+        overflow: hidden;
+    }
+
+    .BoutonMenu {
+        border-radius: 7px;
+        height: 2vw;
+        margin-top: 2%;
+    }
+
+    .BoutonMenuInput {
+        border-radius: 7px;
+        height: 2vw;
+        margin-top: 2%;
+    }
+
+    .Gauche {
+        text-align: center;
+        justify-content: center;
+        height: 81.8%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-left: 8px;
+    }
+
+    #Droite {
+        text-align: center;
+        justify-content: center;
+        height: 94.8%;
+        overflow-y: scroll;
+        padding-right: 8px;
+    }
+
+    #Warning {
+        color: rgb(216, 1, 1);
+    }
+
+    #Droite>h3 {
+        display: flex;
+    }
+
+    .Gauche>h3 {
+        display: flex;
+    }
+
+    #Droite>h3:before, #Droite>h3:after, .Gauche>h3:before, .Gauche>h3:after {
+        color: white;
+        content: '';
+        flex: 1;
+        border-bottom: solid 2px;
+        margin: auto 6px;
+    }
+
+    #Droite>h3::before {
+        margin-left: 1.3em !important;
+    }
+
+    .Centre {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: scale(1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #AlerteRetour, #MenuArbitre {
+        position: relative;
+        left: -50%;
+        top: 10%;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        border-radius: 12px;
+        background-color: var(--PrimaryColor);
+        backdrop-filter: blur(5px);
+        box-shadow: 0px 0px 10px black;
+        display: none;
+        opacity: 0;
+    }
+
+    #MenuArbitre {
+        width: 50vw;
+        height: 82vh;
+        display: none;
+        opacity: 1;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #AlerteRetour>#RetourMenu, #AlerteRetour>#RetourPage {
+        height: 0.9em;
+        width: 10%;
+        position: relative;
+        left: 45%;
+    }
+
+    #AlerteRetour>#RetourMenu:hover, #AlerteRetour>#RetourPage:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    #Darken {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        opacity: 0;
+    }
+
+    h1 {
+        position: relative;
+        top: -4.5%;
+    }
+
+    #SousTitre {
+        position: relative;
+        text-align: center;
+        left: -50%;
+    }
+
+    #CentreTitre {
+        position: absolute;
+        left: 50%;
+        top: 10%;
+    }
+
+    .Bouton {
+        width: 16%;
+        background-color: var(--PrimaryColor);
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px black;
+        transition: transform 0.2s;
+        position: relative;
+        top: 10%;
+        margin: auto auto auto auto;
+        align-items: center;
+    }
+
+    .Bouton:hover {
+        transform: scale(1.07);
+    }
+
+    .Bouton:active {
+        transform: scale(1);
+    }
+
+    .Rectangle {
+        display: flex;
+        height: 7vw;
+        justify-content: space-evenly;
+    }
+
+    #Etapes {
+        margin-left: -50%;
+        display: flex;
+    }
+
+    .LigneArbitre {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border: solid 0.8px;
+        border-radius: 12px;
+    }
+
+    #CentreRetour {
+        top: 30%;
+    }
+
+    .LigneArbitre>.Bouton {
+        width: 5%;
+        font-size: x-large;
+        margin: auto 0;
+    }
+
+    .LigneArbitre:nth-of-type(3) {
+        border-top: none;
+    }
+
+    .LigneArbitre:nth-of-type(2) {
+        border-bottom: none;
+    }
+
+    .Void {
+        border: solid red 0.5px;
+    }
+
+    .Red {
+        color: red;
+    }
+
+    /* The Switch - the box around the Slider */
+
+    .Switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    /* Hide default HTML checkbox */
+
+    .Switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* The Slider */
+
+    .Slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 0, 0, 0);
+        border: solid 0.5px;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .Slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 10%;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.Slider {
+        background-color: #07587e;
+    }
+
+    input:checked+.Slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+
+    .Slider.Round {
+        border-radius: 34px;
+    }
+
+    .Slider.Round:before {
+        border-radius: 50%;
+    }
+
+    .DivSwitch {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    #BarreEtape {
+        margin-top: 1%;
+        margin-left: 2%;
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted rgb(214, 28, 28);
+    }
+
+    .Numero {
+        position: absolute;
+        font-size: 191%;
+        z-index: 10;
+        top: 18%;
+        text-shadow: 1px 0px 0px #000000, -1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, 0px -1px 0px #000000;
+        cursor: default;
+        left: 2px;
+        right: 0;
+    }
+
+    .Nom {
+        text-shadow: 1px 0px 0px #000000, -1px 0px 0px #000000, 0px 1px 0px #000000, 0px -1px 0px #000000, 0px -1px 0px #000000;
+    }
+
+    .Popup {
+        display: none;
+        position: relative;
+        left: -50%;
+        margin-top: 25%;
+        background-color: var(--PrimaryColor);
+        border-radius: 12px;
+        padding: 5px 10px;
+        flex-direction: column;
+        align-items: center;
+        height: 43vh;
+        justify-content: space-evenly;
+        opacity: 0;
+    }
+
+    .ContentPOPUP {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ContentPOPUP>h4 {
+        color: red;
+        text-align: center;
+    }
+
+    .FooterPOPUP {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .FooterPOPUP>div {
+        width: 31%;
+        height: 110%;
+        padding: 5px;
+        position: static;
+        margin: 0;
+    }

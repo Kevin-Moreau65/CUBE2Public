@@ -1,0 +1,626 @@
+html {
+    color: white;
+}
+
+body {
+    background-image: url("../img/Background-Menu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+p {
+    font-size: 14px;
+    /* Paragraphes de 14 pixels */
+    text-align: center;
+}
+
+h1 {
+    position: relative;
+    top: -4.5%;
+}
+
+h2 {
+    margin-top: 4%;
+}
+
+#greybox {
+    background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    position: relative;
+    margin-top: 0;
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    transition: transform 1s, opacity 1s;
+    text-align: center;
+}
+
+#Barreetape {
+    margin-top: 1%;
+    margin-left: 0.5%;
+    border-radius: 9px;
+    overflow: hidden;
+    border: none;
+}
+
+.Button {
+    position: relative;
+    top: 5%;
+    background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(3px);
+    width: 40%;
+    height: 2vw;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    margin-top: 9.5%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.15s;
+    box-shadow: 0px 0px 15px black;
+    line-height: 39px;
+}
+
+button {
+    background-color: rgba(206, 206, 206, 0.4);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px black;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1)
+}
+
+button:active {
+    transform: scale(0.9)
+}
+
+.entete {
+    margin-top: 5%;
+    text-align: center;
+    cursor: default;
+}
+
+/* Fleches JQUERY ----------------------------------------------------------*/
+
+#Centre {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: scale(1);
+}
+
+#Precedent, #Suivant {
+    background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(5px);
+    width: 1.2em;
+    text-align: center;
+    height: 15vh;
+    position: absolute;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    color: black;
+    transition: transform 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#Precedent:hover, #Suivant:hover {
+    transform: scale(1.05);
+}
+
+#Precedent:active, #Suivant:active {
+    transform: scale(0.95)
+}
+
+#Precedent {
+    margin-right: 85.5%;
+    right: 0;
+    padding-right: 10px;
+}
+
+#Suivant {
+    margin-left: 85%;
+    padding-left: 10px;
+}
+
+#Suivant>h3 {
+    margin-right: 10px;
+}
+
+#Precedent>h3 {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
+
+#NextStep {
+    position: absolute;
+    left: 0;
+    margin-left: 1.8em;
+    height: auto;
+    width: 8em;
+}
+
+#BackStep {
+    position: absolute;
+    right: 0;
+    margin-right: 2em;
+    height: auto;
+    width: 8em;
+}
+
+#SousTitre {
+    position: relative;
+    left: -50%;
+}
+
+.Passé {
+    transform: translateX(-200%) scale(0.1);
+    opacity: 0;
+}
+
+.PasPassé {
+    transform: translateX(200%) scale(0.1);
+    opacity: 0;
+}
+
+#Etape1 {
+    /* background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto; */
+    position: relative;
+    transition: transform 1s, opacity 1s;
+    top: 10%;
+}
+
+#Etape2 {
+    /* background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto; */
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s, opacity 1s;
+    bottom: 25%;
+    text-align: center;
+}
+
+#Etape3 {
+    /* background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto; */
+    position: relative;
+    /* overflow: hidden; */
+    transition: transform 1s, opacity 1s;
+    bottom: 72%;
+    text-align: center;
+}
+
+#Menu-Gauche {
+    position: absolute;
+    width: 25%;
+    left: 0%;
+    text-align: center;
+    height: 100%;
+}
+
+#Menu-Droit {
+    position: absolute;
+    width: 25%;
+    right: 0%;
+    text-align: center;
+    height: 100%;
+}
+
+#AlerteRetour {
+    position: relative;
+    left: -50%;
+    top: 50%;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 10px black;
+    display: none;
+    opacity: 0;
+}
+
+#AlerteRetour>#RetourMenu, #AlerteRetour>#RetourPage {
+    height: 0.9em;
+    width: 10%;
+    position: relative;
+    left: 45%;
+}
+
+#AlerteRetour>#RetourMenu:hover, #AlerteRetour>#RetourPage:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#Darken {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+}
+.casejoueur {
+    display: flex;
+
+}
+
+.element_1
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(206, 206, 206, 0.4); 
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: transform 1s, opacity 1s;
+}
+
+.element_2
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(206, 206, 206, 0.4); 
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    transition: transform 1s, opacity 1s;
+}
+
+.case_Milieux,.case_Attaquant,.case_Defenseurs,.case_Gardiens
+{
+    color:white;
+    border:solid 1px black;
+    text-align: center;
+}
+
+.Maillot_1,.Maillot_2,.Maillot_3
+{
+    color:white;
+    border:solid 1px black;
+    text-align: center;
+}
+
+
+
+
+
+/* Input type file -----------------------------------------------------------*/
+
+#file {
+    display: none;
+}
+
+label {
+    color: white;
+    height: 8vh;
+    width: 12vw;
+    background-color: #07587e;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    font-size: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+/* styles du retour visuel */
+
+/* .file-return {
+	margin: 0;
+}
+
+.file-return:not(:empty) {
+	margin: 1em 0;
+}
+
+.js .file-return {
+	font-style: italic;
+	font-size: .9em;
+	font-weight: bold;
+} */
+
+/* on complète l'information d'un contenu textuel uniquement lorsque le paragraphe n'est pas vide */
+
+/* .js .file-return:not(:empty):before {
+	content: "Selected file: ";
+	font-style: normal;
+	font-weight: normal;
+} */
+
+#blah {
+    position: relative;
+}
+
+#clah {
+    position: relative;
+}
+
+#dlah {
+    position: absolute;
+}
+
+#elah {
+    position: absolute;
+}
+
+/* CSS JANEK ------------------------------------------------------------------------------- */
+
+/* footer {
+    font-size: 8rem;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+#Conteneur {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 450px;
+    width: 250px;
+    margin: auto;
+}
+
+.element {
+    height: 50px;
+}
+
+#poste-select {
+    text-align: end;
+} */
+
+.tableau {
+    background: rgba(206, 206, 206, 0.5);
+    width: 35%;
+    height: 62%;
+    bottom: 10%;
+    position: relative;
+    border-radius: 30px;
+}
+
+#flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+.background {
+    background-color: rgba(206, 206, 206, 0.4);
+    backdrop-filter: blur(5px);
+}
+#carrégris {
+    background-color: rgba(206, 206, 206, 0.4);
+    overflow: hidden;
+    transition: transform 1s, opacity 1s;
+    /* border-radius: 12px; */
+    position:relative;
+    /* left: 28%; */
+    top: -15%;
+    width: 30%;
+    height: 60vh;
+    overflow-y: scroll;
+    transition: transform 1s, opacity 1s;
+    text-align: center;
+}
+
+#recap_match
+{
+    position: absolute;
+    bottom: 2%;
+    left: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: rgba(206, 206, 206, 0.4); */
+    overflow: hidden;
+    transition: transform 1s, opacity 1s;
+    backdrop-filter: blur(5px);
+    height: 60%;
+    width: 60%;
+} 
+
+#Conteneur
+{
+    display: flex;
+    background-color: rgba(206, 206, 206, 0.4);
+    transition: transform 1s, opacity 1s;
+    /* border-radius: 12px; */
+    position: relative;
+    /* left: 25%; */
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 45%; */
+    width: 15%;
+    /* margin: auto; */
+}
+
+.Maillot 
+{
+   
+    border-radius: 12px;
+    width: 70%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+    text-align: center;
+}
+/* PAGE 4 ------------------------------------------------------------------------------------------ */
+
+
+.ligne_logo
+{
+    position: absolute;
+    top: 23%;
+    left: 20%;
+    width: 60%;
+    height: 15%;
+    background-color: rgba(206, 206, 206, 0.4);
+}
+
+#logo_E
+{
+    position: absolute;
+    left: 77%;    
+}
+
+#print_NE
+{
+   width:60%;
+   position:relative;   
+   top:50px;
+}
+
+#Contenus
+{
+    
+    border-radius: 12px;
+    position: relative;
+    margin-top: 0;
+    margin-left: 15%;
+    width: 70%;
+    /* height: ; */
+    
+}
+
+.row
+{
+    display: flex;
+    
+}
+#Contenu_gauche
+{   
+   /* flex-direction: column;*/
+    width: 40%;
+    height: 40%;
+   /* margin-right: none;  */ 
+}
+
+#Contenu_droite
+{
+    width: 30%;
+    height: 30%;
+    flex-direction: column;
+    position: relative;
+    left: 10%;
+    margin-left: none;
+         
+}  */
+
+#Attaquant, #Defenseur, #Milieu, #Gardien, #Maillot_1, #Maillot_2, #Maillot_3
+{
+  display: flex; 
+  text-align: left;
+}
+
+
+#Attaquant:after,#Attaquant::before , #Defenseur:after,#Defenseur:before, #Milieu:before,#Milieu:after, #Gardien:after,#Gardien:before, #Maillot_1:after,#Maillot_1:before ,#Maillot_2:after,#Maillot_2:before, #Maillot_3:after,#Maillot_3:before
+{
+
+
+color: white;
+content: '';    
+flex: 0.5;
+border-bottom: solid 2px;
+margin: auto 6px;
+}
+
+
+.casejoueur {
+    display: flex;
+    width: 30%;
+    height: 30%;
+    
+    /* flex-wrap: wrap; */
+}
+
+.nomjoueur {
+    width: 25%;
+    height: 25%;
+    margin: 5%;
+   
+    text-align:center;
+}
+
+.colonnedroite {
+    position: relative;
+    left: 70%;
+    display : flex;
+    flex-direction : column;
+    
+    width: 20%;
+    height:70%;
+}
+.cadreimages {
+    
+    max-width: 100%;
+    max-height: 22%;
+    text-align:center;
+}
+
+#print_E, #print_MD, #print_ME, #print_MA {
+
+    font-size: 14px;
+    /* Paragraphes de 14 pixels */
+    text-align: center;
+    margin-top: 2%;
+
+}
+.input-page1 {
+
+    display: flex;
+    flex-direction: column;
+}
+.input-file-container {
+
+    height: 60%;
+}
+
+.scroller {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-color: rgb(253, 253, 253) rgba(0, 0, 0, 0);
+    scrollbar-width: thin;
+    margin-top: 5%;
+}
+
+.liste_joueurs {
+
+    font-size: 14px;
+}
